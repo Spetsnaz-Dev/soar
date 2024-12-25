@@ -4,6 +4,9 @@
 
 1. Run `npm install` to install the dependencies.
 2. Run `npm run start` to start the application.
+3. Run `node generateToken.js` to generate a new JWT for a given user.
+4. Use this token as a Bearer JWT token.
+5. Directly import the API collection file and use it. See list of Variables for the collection after importing.
 
 **LIVE Hosted URL:** [https://soar-krln.onrender.com](https://soar-krln.onrender.com)
 

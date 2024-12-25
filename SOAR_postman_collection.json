@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "916fefdc-8c7e-4f17-93c3-042266149422",
+		"_postman_id": "84a5db15-3ca5-4c77-81bc-f62b59c5f935",
 		"name": "API Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26009958",
-		"_collection_link": "https://universal-meadow-903804.postman.co/workspace/My-Workspace~6ef0d441-901f-4530-8711-2e3631e75618/collection/26009958-916fefdc-8c7e-4f17-93c3-042266149422?action=share&source=collection_link&creator=26009958"
+		"_exporter_id": "2834225"
 	},
 	"item": [
 		{
@@ -26,15 +25,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"firstName\": \"Spetsnaz\",\n  \"lastName\": \"12\",\n  \"age\": 25,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+							"raw": "{\n  \"firstName\": \"Naman\",\n  \"lastName\": \"Samay\",\n  \"age\": 26,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/students",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/students",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"students"
@@ -134,12 +131,10 @@
 							"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"age\": 15,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/students/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/students/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"students",
@@ -242,12 +237,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/students/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/students/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"students",
@@ -353,12 +346,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/students",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/students",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"students"
@@ -459,12 +450,10 @@
 							"raw": "{\n  \"name\": \"Carmel Convent School Duplicate\",\n  \"address\": \"13th Main, Sarjapur, Bangalore, KA\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/schools",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/schools",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"schools"
@@ -564,12 +553,10 @@
 							"raw": "{\n    \"address\": \"21st Main, Bellandur, Bangalore, KA\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/schools/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/schools/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"schools",
@@ -693,12 +680,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/schools/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/schools/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"schools",
@@ -804,21 +789,19 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/students",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/schools",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
-								"students"
+								"schools"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Get All Schools",
+							"name": "Get All Schools success",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -832,15 +815,13 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3000/api/students",
-									"protocol": "http",
+									"raw": "{{liveURL}}/api/schools",
 									"host": [
-										"localhost"
+										"{{liveURL}}"
 									],
-									"port": "3000",
 									"path": [
 										"api",
-										"students"
+										"schools"
 									]
 								}
 							},
@@ -849,12 +830,8 @@
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
+									"key": "Date",
+									"value": "Wed, 25 Dec 2024 15:01:30 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -862,27 +839,59 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "1823"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"71f-OVfpE9xtdwcPhFLM8hxPAYPOtaM\""
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 23 Dec 2024 20:41:57 GMT"
+									"value": "258"
 								},
 								{
 									"key": "Connection",
 									"value": "keep-alive"
 								},
 								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
+									"key": "CF-Ray",
+									"value": "8f79b4efcdca178b-MAA"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"258-2r96RmevOi2hvL9MI+O+O/y0poU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "d7346ce1-7338-4b93"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"_id\": \"64a000000000000000000001\",\n        \"firstName\": \"Super\",\n        \"lastName\": \"Admin\",\n        \"role\": \"superadmin\",\n        \"age\": 69,\n        \"createdAt\": \"2024-12-23T20:41:57.656Z\"\n    },\n    {\n        \"_id\": \"676732c1011a5b4cba450aaa\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"age\": 15,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769b9ee1bc62670bc51ea4c\",\n        \"firstName\": \"Ravindra\",\n        \"lastName\": \"K\",\n        \"age\": 27,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T19:28:46.651Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769ba031bc62670bc51ea4f\",\n        \"firstName\": \"Spetsnaz    \",\n        \"lastName\": \"12\",\n        \"age\": 25,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T19:29:07.651Z\",\n        \"__v\": 0\n    }\n]"
+							"body": "[\n    {\n        \"_id\": \"64a000000000000000000002\",\n        \"name\": \"Bright Future Academy\",\n        \"address\": \"123 School Lane, Education City\",\n        \"superadmin\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-25T15:01:30.859Z\"\n    },\n    {\n        \"_id\": \"6769c1d48f05e0e6b96d8b31\",\n        \"name\": \"Assembly of God Church School\",\n        \"address\": \"13th Main, Bellandur, Bangalore, KA\",\n        \"superadmin\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T20:02:28.534Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769c1f58f05e0e6b96d8b34\",\n        \"name\": \"Carmel Convent School\",\n        \"address\": \"21st Main, Bellandur, Bangalore, KA\",\n        \"superadmin\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T20:03:01.251Z\",\n        \"__v\": 0\n    }\n]"
 						}
 					]
 				}
@@ -910,12 +919,10 @@
 							"raw": "{\n  \"name\": \"10D\",\n  \"capacity\": \"180\",\n  \"school\": \"6769c1d48f05e0e6b96d8b31\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/classrooms",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/classrooms",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"classrooms"
@@ -1086,12 +1093,10 @@
 							"raw": "{\n  \"capacity\": 195\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/classrooms/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/classrooms/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"classrooms",
@@ -1201,12 +1206,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/classrooms/:id",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/classrooms/:id",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"classrooms",
@@ -1312,12 +1315,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/classrooms",
-							"protocol": "http",
+							"raw": "{{liveURL}}/api/classrooms",
 							"host": [
-								"localhost"
+								"{{liveURL}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"classrooms"
@@ -1395,6 +1396,40 @@
 					]
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "liveURL",
+			"value": "https://soar-krln.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "localhostURL",
+			"value": "http://localhost:3000",
+			"type": "string"
 		}
 	]
 }
