@@ -9,6 +9,10 @@
 
 **Postman Collection JSON with examples:** Collection file included in project files
 
+**Assumptions and Extras:**
+
+- Didn't run the app on multiple ports just for simplicity but I have tested and commented the code in the server file.
+
 ## Authentication Flow
 
 ### Overview
