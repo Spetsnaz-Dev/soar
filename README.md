@@ -7,7 +7,7 @@
 
 **LIVE Hosted URL:** [https://soar-krln.onrender.com](https://soar-krln.onrender.com)
 
-**Postman Collection JSON with examples:** [xyz.com](xyz.com)
+**Postman Collection JSON with examples:** Collection file included in project files
 
 ## Authentication Flow
 
