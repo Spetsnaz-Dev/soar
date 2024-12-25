@@ -1,0 +1,1400 @@
+{
+	"info": {
+		"_postman_id": "916fefdc-8c7e-4f17-93c3-042266149422",
+		"name": "API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26009958",
+		"_collection_link": "https://universal-meadow-903804.postman.co/workspace/My-Workspace~6ef0d441-901f-4530-8711-2e3631e75618/collection/26009958-916fefdc-8c7e-4f17-93c3-042266149422?action=share&source=collection_link&creator=26009958"
+	},
+	"item": [
+		{
+			"name": "Student Routes",
+			"item": [
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk3Njg0OSwiZXhwIjoxNzM1NDk1MjQ5fQ.EiXjWbElHXd0QjKzRuTHOn086ivvV6CqXY4QhMWIUc8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Spetsnaz\",\n  \"lastName\": \"12\",\n  \"age\": 25,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create student success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Doe\",\n  \"age\": 15,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-6nKqEqFTx8ZH6FFemsC/i/36Enc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"age\": 15,\n    \"school\": \"64a000000000000000000002\",\n    \"classroom\": \"64a000000000000000000003\",\n    \"createdBy\": \"64a000000000000000000001\",\n    \"_id\": \"676732c1011a5b4cba450aaa\",\n    \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"age\": 15,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/students/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"students",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "676732c1011a5b4cba450aaa"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create student success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Doe\",\n  \"age\": 15,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-6nKqEqFTx8ZH6FFemsC/i/36Enc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"age\": 15,\n    \"school\": \"64a000000000000000000002\",\n    \"classroom\": \"64a000000000000000000003\",\n    \"createdBy\": \"64a000000000000000000001\",\n    \"_id\": \"676732c1011a5b4cba450aaa\",\n    \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4Mjg4MSwiZXhwIjoxNzM1NTAxMjgxfQ.fD1HX_-I6gbEelVGvVDgqUWMmHMnoyg_FPrO86yXOrg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/students/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"students",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6769d38ee3c4274cf6bd5b90"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete student success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4Mjg4MSwiZXhwIjoxNzM1NTAxMjgxfQ.fD1HX_-I6gbEelVGvVDgqUWMmHMnoyg_FPrO86yXOrg"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/students/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6769ba111bc62670bc51ea52"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-xM8teusA54LB50bevTlxPmN0z+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 19:45:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Student deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all students success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "700"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bc-+UgkzS4A3GVGcT4CCnot7ILlseY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 22:09:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"64a000000000000000000001\",\n        \"firstName\": \"Super\",\n        \"lastName\": \"Admin\",\n        \"role\": \"superadmin\",\n        \"age\": 69,\n        \"createdAt\": \"2024-12-21T22:09:10.557Z\"\n    },\n    {\n        \"_id\": \"676732c1011a5b4cba450aaa\",\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Doe\",\n        \"age\": 15,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-21T22:09:10.591Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-21T22:09:10.589Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "School Routes",
+			"item": [
+				{
+					"name": "Create School",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk3Njg0OSwiZXhwIjoxNzM1NDk1MjQ5fQ.EiXjWbElHXd0QjKzRuTHOn086ivvV6CqXY4QhMWIUc8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Carmel Convent School Duplicate\",\n  \"address\": \"13th Main, Sarjapur, Bangalore, KA\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/schools",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schools"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create School",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk3Njg0OSwiZXhwIjoxNzM1NDk1MjQ5fQ.EiXjWbElHXd0QjKzRuTHOn086ivvV6CqXY4QhMWIUc8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Carmel Convent School\",\n  \"address\": \"13th Main, Sarjapur, Bangalore, KA\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/schools",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"schools"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-e/JvllMijsiY2Xfy0RWvbv0VhGg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 20:03:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Carmel Convent School\",\n    \"address\": \"13th Main, Sarjapur, Bangalore, KA\",\n    \"superadmin\": \"64a000000000000000000001\",\n    \"_id\": \"6769c1f58f05e0e6b96d8b34\",\n    \"createdAt\": \"2024-12-23T20:03:01.251Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update School",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4ODUwNiwiZXhwIjoxNzM1NTA2OTA2fQ.t2_WIHo71tE3MwjQBdlrLZgCRsrmit0BG_KdLyUA_Lg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"21st Main, Bellandur, Bangalore, KA\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/schools/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schools",
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6769c1f58f05e0e6b96d8b34"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update School success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4ODUwNiwiZXhwIjoxNzM1NTA2OTA2fQ.t2_WIHo71tE3MwjQBdlrLZgCRsrmit0BG_KdLyUA_Lg"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"21st Main, Bellandur, Bangalore, KA\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/schools/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"schools",
+										":id"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6769c1f58f05e0e6b96d8b34"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "200"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c8-1FZXAQqTRCOkxtEg9VdknY1WAz0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 21:21:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6769c1f58f05e0e6b96d8b34\",\n    \"name\": \"Carmel Convent School\",\n    \"address\": \"21st Main, Bellandur, Bangalore, KA\",\n    \"superadmin\": \"64a000000000000000000001\",\n    \"createdAt\": \"2024-12-23T20:03:01.251Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete School",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4ODUwNiwiZXhwIjoxNzM1NTA2OTA2fQ.t2_WIHo71tE3MwjQBdlrLZgCRsrmit0BG_KdLyUA_Lg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/schools/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"schools",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6769d38ee3c4274cf6bd5b90"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete School success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4ODUwNiwiZXhwIjoxNzM1NTA2OTA2fQ.t2_WIHo71tE3MwjQBdlrLZgCRsrmit0BG_KdLyUA_Lg"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/schools/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"schools",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6769d38ee3c4274cf6bd5b90"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-mcS/EzMT6ZdHKHhcKxqLtOvjWkw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 21:20:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"School deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Schools",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4NjUwMiwiZXhwIjoxNzM1NTA0OTAyfQ.2tGdlAgj5HleIh_ObcMYz9IoI60dmrhYTIyPGRqw6e4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Schools",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk4NjUwMiwiZXhwIjoxNzM1NTA0OTAyfQ.2tGdlAgj5HleIh_ObcMYz9IoI60dmrhYTIyPGRqw6e4"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1823"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"71f-OVfpE9xtdwcPhFLM8hxPAYPOtaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 20:41:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"64a000000000000000000001\",\n        \"firstName\": \"Super\",\n        \"lastName\": \"Admin\",\n        \"role\": \"superadmin\",\n        \"age\": 69,\n        \"createdAt\": \"2024-12-23T20:41:57.656Z\"\n    },\n    {\n        \"_id\": \"676732c1011a5b4cba450aaa\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"age\": 15,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769b9ee1bc62670bc51ea4c\",\n        \"firstName\": \"Ravindra\",\n        \"lastName\": \"K\",\n        \"age\": 27,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T19:28:46.651Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769ba031bc62670bc51ea4f\",\n        \"firstName\": \"Spetsnaz    \",\n        \"lastName\": \"12\",\n        \"age\": 25,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.690Z\"\n        },\n        \"classroom\": {\n            \"_id\": \"64a000000000000000000003\",\n            \"name\": \"Grade 1A\",\n            \"capacity\": 30,\n            \"school\": \"64a000000000000000000002\",\n            \"createdBy\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:41:57.693Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T19:29:07.651Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Classroom Routes",
+			"item": [
+				{
+					"name": "Create Classroom",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjlkNWJhMTY3OWUyMGFiM2JmYTUyMCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MDM4NCwiZXhwIjoxNzM1NTA4Nzg0fQ.FwVGrOjwwY5oqbdGCkRaz8HnheRLDPPa_NcaMW1Vn1M"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"10D\",\n  \"capacity\": \"180\",\n  \"school\": \"6769c1d48f05e0e6b96d8b31\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/classrooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"classrooms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create student success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDgxNTYzMSwiZXhwIjoxNzM0ODM3MjMxfQ.VRYrZg6pOCnAzdT1O0ROVBMhIXWMqGNm-aYzO7xrsQo"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Doe\",\n  \"age\": 15,\n  \"school\": \"64a000000000000000000002\", \n  \"classroom\": \"64a000000000000000000003\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"students"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-6nKqEqFTx8ZH6FFemsC/i/36Enc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Dec 2024 21:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"age\": 15,\n    \"school\": \"64a000000000000000000002\",\n    \"classroom\": \"64a000000000000000000003\",\n    \"createdBy\": \"64a000000000000000000001\",\n    \"_id\": \"676732c1011a5b4cba450aaa\",\n    \"createdAt\": \"2024-12-21T21:27:29.924Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Create Classroom success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjlkNWJhMTY3OWUyMGFiM2JmYTUyMCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MDM4NCwiZXhwIjoxNzM1NTA4Nzg0fQ.FwVGrOjwwY5oqbdGCkRaz8HnheRLDPPa_NcaMW1Vn1M"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"10D\",\n  \"capacity\": \"180\",\n  \"school\": \"6769c1d48f05e0e6b96d8b31\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/classrooms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"classrooms"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-XmmGrmYW89PIjeWif6h2PUoUV8c\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 21:46:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"10D\",\n    \"capacity\": 180,\n    \"school\": \"6769c1d48f05e0e6b96d8b31\",\n    \"createdBy\": \"6769d5ba1679e20ab3bfa520\",\n    \"_id\": \"6769da42a9b62260adf06999\",\n    \"createdAt\": \"2024-12-23T21:46:42.849Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Classroom",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjlkNWJhMTY3OWUyMGFiM2JmYTUyMCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MDQ3MywiZXhwIjoxNzM1NTA4ODczfQ.FEG6cOTmnA9VQTauKl8tik65Cia7h_4LWoxF4kR95ws"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"capacity\": 195\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/classrooms/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"classrooms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6769da42a9b62260adf06999"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Classroom success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjlkNWJhMTY3OWUyMGFiM2JmYTUyMCIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MDQ3MywiZXhwIjoxNzM1NTA4ODczfQ.FEG6cOTmnA9VQTauKl8tik65Cia7h_4LWoxF4kR95ws"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"capacity\": 195\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/classrooms/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"classrooms",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6769da42a9b62260adf06999"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-xEP7w8shR+XJdMeSrVuCsjlHClI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 21:53:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6769da42a9b62260adf06999\",\n    \"name\": \"10D\",\n    \"capacity\": 195,\n    \"school\": \"6769c1d48f05e0e6b96d8b31\",\n    \"createdBy\": \"6769d5ba1679e20ab3bfa520\",\n    \"createdAt\": \"2024-12-23T21:46:42.849Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Classroom",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MTI5MCwiZXhwIjoxNzM1NTA5NjkwfQ.VPAuJy5bsELYvsdIaIVagHMaT9YOQlwjY490OznNTE8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/classrooms/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"classrooms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6769da42a9b62260adf06999"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Classroom success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzY2hvb2xhZG1pbiIsImlhdCI6MTczNDk5MTI5MCwiZXhwIjoxNzM1NTA5NjkwfQ.VPAuJy5bsELYvsdIaIVagHMaT9YOQlwjY490OznNTE8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/classrooms/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"classrooms",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6769da42a9b62260adf06999"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-mnq1mxjZNz16zbIG2OPZXKoliYM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 22:02:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Classroom deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Classrooms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM0OTkxNTAzLCJleHAiOjE3MzU1MDk5MDN9.fJNvOUa_Kqhs2i1uyyW3QLoR5jgbN1ulWEITAHEuqM0"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/classrooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"classrooms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Classrooms success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzM0OTkxNTAzLCJleHAiOjE3MzU1MDk5MDN9.fJNvOUa_Kqhs2i1uyyW3QLoR5jgbN1ulWEITAHEuqM0"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/classrooms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"classrooms"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a5-TFxvnDbHR7CtX8GgKDot56VTQcI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Dec 2024 22:05:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"64a000000000000000000003\",\n        \"name\": \"Grade 1A\",\n        \"capacity\": 30,\n        \"school\": {\n            \"_id\": \"64a000000000000000000002\",\n            \"name\": \"Bright Future Academy\",\n            \"address\": \"123 School Lane, Education City\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T22:05:25.626Z\"\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T22:05:25.596Z\"\n    },\n    {\n        \"_id\": \"6769d571ad060f32e26d461a\",\n        \"name\": \"10A\",\n        \"capacity\": 180,\n        \"school\": {\n            \"_id\": \"6769c1d48f05e0e6b96d8b31\",\n            \"name\": \"Assembly of God Church School\",\n            \"address\": \"13th Main, Bellandur, Bangalore, KA\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:02:28.534Z\",\n            \"__v\": 0\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T21:26:09.710Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769d58ead060f32e26d461d\",\n        \"name\": \"10B\",\n        \"capacity\": 180,\n        \"school\": {\n            \"_id\": \"6769c1d48f05e0e6b96d8b31\",\n            \"name\": \"Assembly of God Church School\",\n            \"address\": \"13th Main, Bellandur, Bangalore, KA\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:02:28.534Z\",\n            \"__v\": 0\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T21:26:38.483Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6769d593ad060f32e26d4620\",\n        \"name\": \"10C\",\n        \"capacity\": 180,\n        \"school\": {\n            \"_id\": \"6769c1d48f05e0e6b96d8b31\",\n            \"name\": \"Assembly of God Church School\",\n            \"address\": \"13th Main, Bellandur, Bangalore, KA\",\n            \"superadmin\": \"64a000000000000000000001\",\n            \"createdAt\": \"2024-12-23T20:02:28.534Z\",\n            \"__v\": 0\n        },\n        \"createdBy\": \"64a000000000000000000001\",\n        \"createdAt\": \"2024-12-23T21:26:43.431Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
