@@ -12,6 +12,7 @@
 **Assumptions and Extras:**
 
 - Didn't run the app on multiple ports just for simplicity but I have tested and commented the code in the server file.
+- I have created a separate file `generateToken.js` to mimic the signing and creaton of JWT token and use it within our APIs. Please run `node generateToken.js` to generate a new token by replacing info into the sample fields.
 
 ## Authentication Flow
 
