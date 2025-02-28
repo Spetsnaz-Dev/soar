@@ -1,4 +1,4 @@
-# SOAR Assignment Level 2
+# SOAR Level 2
 
 **How to Set Up This Project and Start Application:**
 
